@@ -9,7 +9,7 @@ sense-cgh version 0.0.97 README:
  
 ESH Group:
 
-	Gil Gallegos
+	Gil Gallegos PhD
 	Miguel Maesta
 	Richard McIntosh
 	Jared Leyba
@@ -25,9 +25,6 @@ Dependencies:
 	
 	* OpenNI - unstable <= 1.5.4 (NOTE: requires Avin2 driver and patches if 
 	  working with the XBOX 360 Kinect sensor)
-	
-	TODO: What's min/max versions of these ???
-
 	* pthread
 	* X11
 	* CImg
