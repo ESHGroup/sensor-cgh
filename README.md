@@ -1,11 +1,11 @@
 sensor-cgh
 ==========
 
-Sensor-Driven Computer Generated Hologram Generator
+OpenNI Sensor-Driven Computer Generated Hologram (CGH) Engine
 
 Last Modified: June 13, 2013
 
-sense-cgh version 0.0.97 README:
+sense-cgh version 0.0.97 README
  
 ESH Group:
 
