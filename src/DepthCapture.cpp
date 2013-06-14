@@ -142,7 +142,7 @@ DepthCapture::DepthCapture(const XnChar * strFileName) {
 
 		// IF PATTERN TEST ----> REMOVE
 
-			complex<XnFloat> ** if_pattern;
+		/*	complex<XnFloat> ** if_pattern;
 
 			int dpi = 600;
 
@@ -150,9 +150,9 @@ DepthCapture::DepthCapture(const XnChar * strFileName) {
 
       		if_pattern = film->GetInterferencePattern(&real_world_pts[0], XRes * YRes);
 
-#ifdef _ESH_DEBUG
-      		cout << "[DEBUG]: got interference pattern [OK]" << endl;
-#endif
+		#ifdef _ESH_DEBUG
+      			cout << "[DEBUG]: got interference pattern [OK]" << endl;
+		#endif
 			CImg<char> if_pattern_real(dpi, dpi);
 
 			char * curr_pix = 0;
@@ -175,7 +175,7 @@ DepthCapture::DepthCapture(const XnChar * strFileName) {
 
 			if_pattern_real.display("Interference Pattern");
 			if_pattern_real.save("/home/rich/Desktop/if_test.png");
-
+			*/
 			// END INTERFERENCE PATTERN TEST: REMOVE!
 
 
