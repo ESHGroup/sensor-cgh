@@ -8,9 +8,6 @@
  *
  */
 
-#include <CImg.h>
-using namespace cimg_library;
-
 #include <XnCppWrapper.h>
 
 #include "DepthCapture.h"
@@ -19,7 +16,6 @@ using namespace cimg_library;
 using namespace std;
 
 #include <iostream>
-#include <fstream>
 
 DepthCapture::DepthCapture(const XnChar * strConfigFile, ostream& depthStream) {
 
@@ -139,6 +135,8 @@ XnStatus DepthCapture::writeDepthToStream(ostream& depthStream, XnPoint3D * pDep
 
 		pDepthMap++;
 	}
+	
+	depthStream.flush();
 
 	clog << "[INFO]: Wrote vertices to file [OK]" << endl;
 
