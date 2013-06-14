@@ -40,6 +40,23 @@ Steps:
 
 	3.) $ make all
 
-	4.) $ ./sensor-cgh
+	4.) $ ./sensor-cgh -c CONFIG -n MAX_FRAMES -o OBJ_FILE
+		
+		* CONFIG -> OpenNI config file listing Sensor's capbilities.
+		* MAX_FRAMES -> Maximum amount of depth frames to capture from Sensor.
+		* OBJ_FILE -> File to write contents of depth frames to.
 
+
+Todo:
+
+	Wow, just about everything this early in the project:
+	
+	* Refactor Classes so logic isn't in Constructor -> DepthCapture.cpp is just rediculous
+	 
+	* Provide a robust logging mechanism
+	 
+	* Get rid of all those ugly hard-coded values HoloFilm.cpp and provide dynamic Holofilm 
+	  scaling
+	* Much more! Please e-mail one of the members on the team if you would like to contribute
+	  to our effor or need help building the binaries.
 
