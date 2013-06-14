@@ -36,7 +36,7 @@ Steps:
 
 	1.) clone repository: $ git clone https://github.com/ESHGroup/sensor-cgh.git
 
-	2.) cd ${SENSOR_CGH_HOME}/Debug
+	2.) cd sensor-cgh/Debug
 
 	3.) $ make all
 
