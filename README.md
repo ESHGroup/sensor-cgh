@@ -3,9 +3,7 @@ sensor-cgh
 
 OpenNI Sensor-Driven Computer Generated Hologram (CGH) Engine
 
-Last Modified: June 13, 2013
-
-sense-cgh version 0.0.97 README
+Last Modified: June 14, 2013
  
 ESH Group:
 
@@ -23,6 +21,8 @@ Build Instructions:
 
 Dependencies:
 	
+	* cmake >= 2.6	
+	* git (unless tarball is downloaded and extracted seperately)	
 	* OpenNI - unstable <= 1.5.4 (NOTE: requires Avin2 driver and patches if 
 	  working with the XBOX 360 Kinect sensor)
 	* pthread
@@ -36,16 +36,11 @@ Steps:
 
 	1.) clone repository: $ git clone https://github.com/ESHGroup/sensor-cgh.git
 
-	2.) cd sensor-cgh/Debug
+	2.) cd sensor-cgh && git checkout main
 
-	3.) $ make all
+	3.) $ cmake src
 
-	4.) $ ./sensor-cgh -c CONFIG -n MAX_FRAMES -o OBJ_FILE
-		
-		* CONFIG -> OpenNI config file listing Sensor's capbilities.
-		* MAX_FRAMES -> Maximum amount of depth frames to capture from Sensor.
-		* OBJ_FILE -> File to write contents of depth frames to.
-
+	4.) $ ./sensor-cgh
 
 Todo:
 
@@ -57,6 +52,7 @@ Todo:
 	 
 	* Get rid of all those ugly hard-coded values HoloFilm.cpp and provide dynamic Holofilm 
 	  scaling
+
 	* Much more! Please e-mail one of the members on the team if you would like to contribute
 	  to our effor or need help building the binaries.
 
