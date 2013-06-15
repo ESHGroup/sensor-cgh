@@ -45,10 +45,6 @@ Steps:
 Todo:
 
 	Wow, just about everything this early in the project:
-	
-	* Refactor Classes so logic isn't in Constructor -> DepthCapture.cpp is just rediculous
-	 
-	* Provide a robust logging mechanism
 	 
 	* Get rid of all those ugly hard-coded values HoloFilm.cpp and provide dynamic Holofilm 
 	  scaling
