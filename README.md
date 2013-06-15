@@ -36,7 +36,7 @@ Steps:
 
 	1.) clone repository: $ git clone https://github.com/ESHGroup/sensor-cgh.git
 
-	2.) cd sensor-cgh && git checkout main
+	2.) cd sensor-cgh
 
 	3.) $ cmake src
 
