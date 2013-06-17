@@ -21,8 +21,7 @@ Build Instructions:
 
 Dependencies:
 	
-	* cmake >= 2.6	
-	* git (unless tarball is downloaded and extracted seperately)	
+	* Cmake >= 2.6	
 	* OpenNI - unstable <= 1.5.4 (NOTE: requires Avin2 driver and patches if 
 	  working with the XBOX 360 Kinect sensor)
 	* pthread
