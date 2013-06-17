@@ -51,9 +51,9 @@ private:
 
 public:
 
-	static const char SYM_VECTOR = 'v';
-	static const char SYM_COMMENT = '#';
-	static const char SYM_FACE = 'f';
+	static const char SYM_VECTOR   = 'v';
+	static const char SYM_COMMENT  = '#';
+	static const char SYM_FACE     = 'f';
 
 	WaveFrontObjFile();
 
