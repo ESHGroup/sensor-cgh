@@ -8,7 +8,7 @@ Last Modified: June 14, 2013
 ESH Group:
 
 	Gil Gallegos PhD
-	Miguel Maesta
+	Miguel Maestas
 	Richard McIntosh
 	Jared Leyba
 	
