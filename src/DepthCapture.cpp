@@ -35,8 +35,9 @@
 using namespace std;
 
 #include <iostream>
+#include <fstream>
 
-DepthCapture::DepthCapture(const XnChar * strConfigFile, ostream& depthStream) {
+DepthCapture::DepthCapture(const XnChar * strConfigFile) {
 
 	XnStatus ret = XN_STATUS_OK;
 
@@ -44,9 +45,8 @@ DepthCapture::DepthCapture(const XnChar * strConfigFile, ostream& depthStream) {
 
 	if (!(ret == XN_STATUS_OK)) {
 		cerr << "[FATAL]: Device initialization [FAILED]" << endl;
-	}
-
-	m_DepthStream = depthStream;
+	}	
+	
 }
 
 XnStatus DepthCapture::initDevice(const XnChar * strConfigFile) {
@@ -105,6 +105,7 @@ XnStatus DepthCapture::Capture(ostream& outStream, XnUInt32 numFrames) {
 
 	const XnDepthPixel* pDepth;
 	bool bCapture = true;
+	XnUInt32 frames_processed = 0;
 
 	while (m_DevContext.WaitOneUpdateAll(m_Depth) == XN_STATUS_OK && bCapture) {
 
@@ -123,7 +124,7 @@ XnStatus DepthCapture::Capture(ostream& outStream, XnUInt32 numFrames) {
 				int index = (m_XRes * row) + col;
 
 				proj_pts[index].X = row;
-				proj_pts[index].Y = col;
+				proj_pts[index].Y = col;				
 				proj_pts[index].Z = *pDepth;
 
 				++pDepth;
@@ -137,8 +138,13 @@ XnStatus DepthCapture::Capture(ostream& outStream, XnUInt32 numFrames) {
 			cerr << "[FATAL]: Conversion of projective points to real-world points [FAILED]" << endl;
 		}
 
-		writeDepthToStream(m_DepthStream, real_world_pts, (m_XRes * m_YRes), m_MapMD.Timestamp());
+		writeDepthToStream(outStream, real_world_pts, (m_XRes * m_YRes), m_MapMD.Timestamp());
+		
+		frames_processed++;
+		if(frames_processed >= numFrames) { bCapture = false; }
 	}
+
+	clog << "[INFO]: Total depth frames processed: " << frames_processed << endl;
 	return XN_STATUS_OK;
 }
 
@@ -151,7 +157,6 @@ XnStatus DepthCapture::writeDepthToStream(ostream& depthStream, XnPoint3D * pDep
 
 		// write vertex to stream
 		depthStream << "v " << (float)pDepthMap->X << " " << (float)pDepthMap->Y << " " << (float)pDepthMap->Z << " " << 1.0f <<  endl;
-
 		pDepthMap++;
 	}
 	

@@ -36,6 +36,7 @@
 using namespace xn;
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -58,8 +59,6 @@ private:
 	// OpenNI configuration file
 	const XnChar * m_ConfigFile;
 
-	ostream& m_DepthStream;
-
 	// maximum amount of depth frames to capture
 	XnUInt64 m_MaxFrames;
 
@@ -73,7 +72,7 @@ private:
 
 public:
 
-	DepthCapture(const XnChar *, ostream&);
+	DepthCapture(const XnChar *);
 	XnStatus Capture(ostream&, XnUInt32);
 
 	virtual ~DepthCapture();
