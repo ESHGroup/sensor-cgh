@@ -39,6 +39,8 @@ int main(int argc, char** argv) {
 	ofstream out("out.obj", (ofstream::out | ofstream::app));
 
 	DepthCapture dc("config.xml");
+	
+
 	dc.Capture(out, 1);
 	
 	out.close();
