@@ -8,9 +8,10 @@ Last Modified: June 14, 2013
 ESH Group:
 
 	Gil Gallegos PhD
-	Miguel Maestas
+	Miguel Maestas B.S.
 	Richard McIntosh
 	Jared Leyba
+	Jesus Angulo
 	
 Introduction:
 ******************************************************************************
@@ -41,13 +42,5 @@ Steps:
 
 	4.) $ ./sensor-cgh
 
-Todo:
 
-	Wow, just about everything this early in the project:
-	 
-	* Get rid of all those ugly hard-coded values HoloFilm.cpp and provide dynamic Holofilm 
-	  scaling
-
-	* Much more! Please e-mail one of the members on the team if you would like to contribute
-	  to our effor or need help building the binaries.
 
